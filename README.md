@@ -2,7 +2,7 @@
 
 Protein-network proximity analysis for Parkinson's disease candidate prioritization using STRING and GTEx substantia nigra expression.
 
-## What this repository guarantees
+## Key Components of Repository
 
 - A canonical, documented pipeline instead of multiple competing script paths.
 - Offline seed mapping from local STRING alias files.
@@ -19,7 +19,7 @@ python scripts/verify_repository.py
 python scripts/run_pipeline.py
 ```
 
-If you also have the raw STRING detailed network file locally, the pipeline will rebuild `data/string/ppi_edges.csv`. If not, it will reuse the tracked `data/string/ppi_edges.csv`.
+If you also have the raw STRING detailed network file locally, the pipeline will rebuild `data/string/ppi_edges.csv`. Otherwise, reuses the tracked `data/string/ppi_edges.csv` :(
 
 To refresh the checksum file after a fresh run:
 
@@ -78,7 +78,7 @@ Repository validation:
 python scripts/verify_repository.py
 ```
 
-Require the raw STRING detailed network to be present too:
+Requires the raw STRING detailed network to be present too:
 
 ```powershell
 python scripts/verify_repository.py --full-rebuild
@@ -92,3 +92,5 @@ python scripts/verify_repository.py --full-rebuild
 - `results/`: Canonical tabular outputs tracked in Git.
 - `figures/`: Canonical figures tracked in Git.
 - `paper/`: Writing and manuscript material.
+
+Reach out with questions
