@@ -16,6 +16,6 @@
 
 ## Supplemental scripts
 
-These files have been moved into `scripts/legacy/` because they represent exploratory, superseded, or auxiliary work and are not part of the canonical reproducible pipeline.
+These files have been moved into `scripts/legacy/` because they represent previous exploratory/superseded and auxiliary work that are not part of the canonical reproducible pipeline.
 
-For a public research repository, this is the cleaner presentation: the main `scripts/` directory shows only the code path a reader should actually run, while older work remains available for provenance without competing with the canonical workflow.
+For cleaner presentation purposes.
