@@ -1,0 +1,11 @@
+name: pd-netprox
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.18
+  - pip=25.1
+  - numpy=2.2.6
+  - pandas=2.3.1
+  - networkx=3.4.2
+  - matplotlib=3.10.5
+  - scipy=1.15.3

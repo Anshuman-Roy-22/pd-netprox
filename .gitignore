@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+
+# Local archives and non-canonical data
+raw_data/
+data/NOT USED/
+project_structure.txt
+data/string/9606.protein.links.detailed.v11.0.txt
+data/string/9606.protein.links.detailed.v11.0.txt.gz
+data/string/9606.protein.aliases.v11.0.txt
+data/string/9606.protein.info.v11.0.txt
+data/string/HUMAN_9606_idmapping.dat
+data/string/HUMAN_9606_idmapping.dat.gz
+
+# Derived intermediates not tracked in Git
+data/string/ppi_graph.pkl
+data/string/ppi_graph.gpickle
+data/string/ppi_edges_genes.csv
+data/string/ensp_to_gene.csv
+data/string/string_to_gene.csv
+
+# Keep only canonical tracked outputs
+results/*
+!results/ranked_candidates.tsv
+!results/top20_candidates.tsv
+!results/top20_genes_for_enrichment.txt
+
+figures/*
+!figures/proximity_vs_tpm_corr.png
+!figures/ppi_subgraph_top20.png
