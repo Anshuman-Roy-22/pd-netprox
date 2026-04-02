@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the software metadata below."
+type: software
+title: "pd-netprox"
+abstract: "Protein-network proximity analysis for Parkinson's disease candidate prioritization using STRING and GTEx substantia nigra expression."
+authors:
+  - family-names: "Roy"
+    given-names: "Anshuman"
+    email: "anroy2209@gmail.com"
+repository-code: "https://github.com/Anshuman-Roy-22/pd-netprox"
+url: "https://github.com/Anshuman-Roy-22/pd-netprox"
+license: "MIT"
+keywords:
+  - "Parkinson's disease"
+  - "network biology"
+  - "STRING"
+  - "GTEx"
+  - "disease gene prioritization"
