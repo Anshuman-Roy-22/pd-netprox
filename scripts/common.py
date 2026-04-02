@@ -61,6 +61,17 @@ CHECKSUM_FILES = [
     PPI_SUBGRAPH_PLOT,
 ]
 
+TEXT_CHECKSUM_SUFFIXES = {
+    ".cff",
+    ".csv",
+    ".md",
+    ".sha256",
+    ".tsv",
+    ".txt",
+    ".yaml",
+    ".yml",
+}
+
 
 def first_existing(candidates: list[Path]) -> Path:
     for candidate in candidates:
@@ -80,6 +91,9 @@ def read_nonempty_lines(path: Path) -> list[str]:
 
 
 def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
+    if path.suffix.lower() in TEXT_CHECKSUM_SUFFIXES:
+        return sha256_text_file(path)
+
     digest = hashlib.sha256()
     with path.open("rb") as handle:
         while True:
@@ -88,6 +102,12 @@ def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
                 break
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def sha256_text_file(path: Path) -> str:
+    # Canonicalize line endings so checksum validation is stable on Windows and Linux.
+    content = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(content).hexdigest()
 
 
 def relpath(path: Path) -> str:
