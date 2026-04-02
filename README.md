@@ -92,7 +92,3 @@ python scripts/verify_repository.py --full-rebuild
 - `results/`: Canonical tabular outputs tracked in Git.
 - `figures/`: Canonical figures tracked in Git.
 - `paper/`: Writing and manuscript material.
-
-## Publication notes
-
-Before making the repository public, review [PUBLISHING.md](PUBLISHING.md) and confirm the external-data redistribution terms are acceptable for every tracked file.
